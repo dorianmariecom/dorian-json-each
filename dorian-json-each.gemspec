@@ -3,9 +3,8 @@
 Gem::Specification.new do |s|
   s.name = "dorian-json-each"
   s.version = "0.0.1"
-  s.summary = "Evaluates some code on json-each line of the input"
-  s.description =
-    "#{s.summary}\n\ne.g. `ls -l | json-each \"puts it.split.first\"`"
+  s.summary = "evaluates ruby code on each of the json"
+  s.description = s.summary
   s.authors = ["Dorian Marié"]
   s.email = "dorian@dorianmarie.com"
   s.files = ["bin/json-each"]
@@ -13,4 +12,6 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/dorianmariecom/dorian-json-each"
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
+  s.add_dependency "json"
+  s.add_dependency "dorian-to_struct"
 end
